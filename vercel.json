@@ -1,11 +1,15 @@
 {
+    "version": 2,
     "builds": [
       {
-        "src": "src/**/*.ts",
-        "use": "@vercel/node",
-        "config": {
-          "zero-config": true
-        }
+        "src": "build/**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
       }
     ]
   }

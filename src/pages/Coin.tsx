@@ -69,14 +69,14 @@ const Coin = () => {
           alt={selectedCoin?.name}
         />
         <p>
-          <b className="text-[44px] font-semibold text-[#3296bd]">
+          <b className="text-[20px] sm:text-[44px] font-semibold text-[#3296bd]">
             {selectedCoin?.name} ({selectedCoin?.symbol?.toUpperCase()})
           </b>
         </p>
-        <div className="coin-chart max-w-[600px] h-[250px] my-[30px] mx-auto">
+        <div className="coin-chart sm:max-w-[600px]    h-[150px] sm:h-[250px] my-[30px] mx-auto">
           <LineChart historicalData={historicalData} />
         </div>
-        <div className="coin-info max-w-[600px] my-[30px] mx-auto flex flex-col">
+        <div className="coin-info sm:max-w-[600px] text-[15px] sm:text-[25px]   my-[30px] mx-auto flex flex-col">
           {[
             {
               label: "Crypto Market Rank",
@@ -84,13 +84,17 @@ const Coin = () => {
             },
             {
               label: "Current Price",
-              value: `${coinData.symbol} ${selectedCoin?.market_data?.current_price[
+              value: `${
+                coinData.symbol
+              } ${selectedCoin?.market_data?.current_price[
                 coinData?.currency
               ]?.toLocaleString()}`,
             },
             {
               label: "Market Cap",
-              value: `${coinData.symbol} ${selectedCoin?.market_data?.market_cap[
+              value: `${
+                coinData.symbol
+              } ${selectedCoin?.market_data?.market_cap[
                 coinData?.currency
               ]?.toLocaleString()}`,
             },

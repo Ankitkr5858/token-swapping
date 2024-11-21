@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import Chart from "react-google-charts";
-const LineChart = ({ historicalData }:any) => {
+const LineChart = ({ historicalData }: any) => {
   const [data, setData] = useState([["Data", "Prices"]]);
 
   useEffect(() => {
     let dataCopy = [["Data", "Prices"]];
     if (historicalData?.prices) {
-      historicalData?.prices.map((item:any) => {
+      historicalData?.prices.map((item: any) => {
         dataCopy.push([
           `${new Date(item[0]).toLocaleDateString().slice(0, 5)}`,
           item[1],

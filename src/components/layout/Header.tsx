@@ -1,12 +1,11 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import { useAppSelector,useAppDispatch } from "@/app/hooks";
+import { useAppSelector, useAppDispatch } from "@/app/hooks";
 import { useEffect } from "react";
-import {fetchCoinData} from "@app/features/coin/coinSlice"
+import { fetchCoinData } from "@app/features/coin/coinSlice";
 
 export default function Header() {
   const dispatch = useAppDispatch();
-
 
   const currencyHandler = (e: any) => {
     const selectedCurrency = e.target.value;
@@ -17,15 +16,16 @@ export default function Header() {
     dispatch(fetchCoinData("usd"));
   }, [dispatch]);
 
-
-
   return (
     <>
-      <div className="flex justify-between items-center px-4 py-2 " style={{ backgroundColor: "#202020" }}>
+      <div
+        className="flex justify-between items-center px-4 py-2 "
+        style={{ backgroundColor: "#202020" }}
+      >
         <div className="flex gap-4">
-          <img className="w-[120px]" src={logo} alt="image" />
+          <img className="w-[80px] sm:w-[120px]  " src={logo} alt="image" />
         </div>
-        <div className="flex items-center gap-4 py-6 px-4 justify-center font-bold text-[18px] text-white ">
+        <div className="flex items-center gap-4 py-6 px-4 justify-center font-bold text-[10px] sm:text-[18px] text-white ">
           <NavLink
             to="/"
             className={({ isActive }) => `${isActive && "text-red-600"}`}
@@ -36,7 +36,7 @@ export default function Header() {
             to="wallet"
             className={({ isActive }) => `${isActive && "text-red-600"}`}
           >
-             Wallet
+            Wallet
           </NavLink>
 
           <NavLink
@@ -45,10 +45,12 @@ export default function Header() {
           >
             About
           </NavLink>
-          
         </div>
         <div className="nav-right ">
-          <select onChange={currencyHandler} className="py-[5px] px-[8px] rounded-[6px]  border-[1px] border-white  text-[#09005c]">
+          <select
+            onChange={currencyHandler}
+            className="py-[3px] px-[3px] text-[10px] sm:py-[5px] sm:px-[8px] rounded-[6px] sm:text-[15px]  border-[1px] border-white  text-[#09005c]"
+          >
             <option className="bg-[#09005c] text-white" value="usd">
               USD
             </option>

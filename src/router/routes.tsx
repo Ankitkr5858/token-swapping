@@ -16,30 +16,24 @@ export const routes = Router([
     children: [
       {
         path: "/",
-        element: <Home/>,
+        element: <Home />,
       },
       {
         path: "/coin/:id",
-        element: (
-         <Coin/>
-        ),
+        element: <Coin />,
       },
       {
         path: "/about",
-        element: (
-          <div>about page will appear here</div>
-        ),
+        element: <div>about page will appear here</div>,
       },
       {
         path: "/wallet",
-        element: (
-         <WalletConnection/>
-        ),
+        element: <WalletConnection />,
       },
-        {
-          path: "/counter",
-          element: <Counter />,
-        },
+      {
+        path: "/counter",
+        element: <Counter />,
+      },
     ],
   },
 ]);

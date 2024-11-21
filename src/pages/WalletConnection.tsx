@@ -9,7 +9,6 @@ const WalletConnection = () => {
   const connectWallet = async () => {
     setLoading(true);
     if (window.ethereum && typeof window.ethereum.request === "function") {
-      // Ensure window.ethereum.request is defined as a function
       try {
         const accounts = await window.ethereum.request({
           method: "eth_requestAccounts",
@@ -34,7 +33,6 @@ const WalletConnection = () => {
 
   const checkWalletConnection = async () => {
     if (window.ethereum && typeof window.ethereum.request === "function") {
-      // Ensure window.ethereum.request is a function
       try {
         const accounts = await window.ethereum.request({
           method: "eth_accounts",

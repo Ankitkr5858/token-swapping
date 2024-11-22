@@ -9,7 +9,7 @@ export const fetchAllCoin = async (input: { currency: string } | string) => {
       method: "GET",
       headers: {
         accept: "application/json",
-        "x-cg-demo-api-key": "CG-5jFPckh3Jo2BkhJK1NjFUPwF",
+        "x-cg-demo-api-key": "CG-pos6h1UzWPUoJGvcakzso5rQ",
       },
       noAuth: true,
     });
@@ -28,7 +28,7 @@ export const fetchSelectedCoinData = async (coinId: any) => {
       method: "GET",
       headers: {
         accept: "application/json",
-        "x-cg-demo-api-key": "CG-5jFPckh3Jo2BkhJK1NjFUPwF",
+        "x-cg-demo-api-key": "CG-pos6h1UzWPUoJGvcakzso5rQ",
       },
       noAuth: true,
     });
@@ -48,7 +48,7 @@ export const fetchHistoricalData = async (coinId:any, currency:any) => {
       method: "GET",
       headers: {
         accept: "application/json",
-        "x-cg-demo-api-key": "CG-5jFPckh3Jo2BkhJK1NjFUPwF",
+        "x-cg-demo-api-key": "CG-pos6h1UzWPUoJGvcakzso5rQ",
       },
       noAuth: true,
     });
